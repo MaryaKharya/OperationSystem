@@ -66,8 +66,8 @@ int main()
 				{
 					if (str[i + 1] == '=')
 					{
-						lexema = str[i] + str[i + 1];
-						i++;
+						lexema = ":=";
+						i += 2;;
 						tokens.push_back({ TokenType::ASSIGMENT, lexema, strNum, (int)i });
 					}
 					else
@@ -98,14 +98,15 @@ int main()
 				{
 					if (str[i + 1] == '>')
 					{
-						lexema = str[i] + str[i + 1];
-						i++;
+						lexema = "<>";
+						i += 2;
 						tokens.push_back({ TokenType::INEQUALITY, lexema, strNum, (int)i });
+						break;
 					}
 					else if (str[i + 1] == '=')
 					{
-						lexema = str[i] + str[i + 1];
-						i++;
+						lexema = "<=";
+						i += 2;
 						tokens.push_back({ TokenType::LESS_EQUAL, lexema, strNum, (int)i });
 					}
 					else
@@ -129,18 +130,21 @@ int main()
 				{
 					if (str[i + 1] == '=')
 					{
-						lexema = str[i] + str[i + 1];
+						lexema = ">=";
+						i += 2;
 						tokens.push_back({ TokenType::GREATER_EQUAL, lexema, strNum, (int)i });
 					}
 					else
 					{
 						lexema = str[i];
+						i++;
 						tokens.push_back({ TokenType::GREATER, lexema, strNum, (int)i });
 					}
 				}
 				else
 				{
 					lexema = str[i];
+					i++;
 					tokens.push_back({ TokenType::GREATER, lexema, strNum, (int)i });
 				}
 				break;
@@ -195,10 +199,17 @@ int main()
 				while ((str[i] != '}'))
 				{
 					i++;
+					std::cout << str[i];
 					if (i == str.size())
 					{
-						std::getline(fileIn, str);
-						i = 0;
+						if ((fileIn.eof()))
+						{
+							break;
+						}
+						if (std::getline(fileIn, str))
+						{
+							i = 0;
+						}
 					}
 				}
 				break;
