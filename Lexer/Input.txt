@@ -1,3 +1,5 @@
-if {(a <> 2)
-th}en
-a = a + 234
+if (a <> 2)
+then
+{Hello,
+word}
+a := 234

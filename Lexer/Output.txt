@@ -6,51 +6,63 @@ token - SPACE
 lexema -  
 number of string - 1 | position - 3
 
+token - OPEN_PARENTHESIS
+lexema - (
+number of string - 1 | position - 4
+
+token - ID
+lexema - a
+number of string - 1 | position - 5
+
+token - SPACE
+lexema -  
+number of string - 1 | position - 6
+
+token - INEQUALITY
+lexema - <>
+number of string - 1 | position - 8
+
+token - SPACE
+lexema -  
+number of string - 1 | position - 9
+
+token - INTEGER
+lexema - 2
+number of string - 1 | position - 10
+
+token - CLOSE_PARENTHESIS
+lexema - )
+number of string - 1 | position - 11
+
+token - THEN
+lexema - then
+number of string - 2 | position - 1
+
 token - OPEN_CURLY_BRACE
 lexema - {
-number of string - 1 | position - 4
+number of string - 3 | position - 1
 
 token - CLOSE_CURLY_BRACE
 lexema - }
-number of string - 1 | position - 3
-
-token - ID
-lexema - en
-number of string - 1 | position - 4
+number of string - 3 | position - 5
 
 token - ID
 lexema - a
-number of string - 2 | position - 1
+number of string - 4 | position - 1
 
 token - SPACE
 lexema -  
-number of string - 2 | position - 2
+number of string - 4 | position - 2
 
-token - EQUALS
-lexema - =
-number of string - 2 | position - 3
-
-token - SPACE
-lexema -  
-number of string - 2 | position - 4
-
-token - ID
-lexema - a
-number of string - 2 | position - 5
+token - ASSIGMENT
+lexema - :=
+number of string - 4 | position - 4
 
 token - SPACE
 lexema -  
-number of string - 2 | position - 6
-
-token - PLUS
-lexema - +
-number of string - 2 | position - 7
-
-token - SPACE
-lexema -  
-number of string - 2 | position - 8
+number of string - 4 | position - 5
 
 token - INTEGER
 lexema - 234
-number of string - 2 | position - 9
+number of string - 4 | position - 6
 
